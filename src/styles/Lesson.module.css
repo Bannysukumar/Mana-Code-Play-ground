@@ -1,0 +1,146 @@
+.container {
+  margin-top: 64px;
+  min-height: calc(100vh - 64px);
+  padding: 32px 24px;
+  background-color: var(--bg-secondary);
+}
+
+.content {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.outputButtonContainer {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.showOutputButton {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: var(--shadow);
+}
+
+.showOutputButton:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+  padding: 20px 0;
+}
+
+.savingIndicator {
+  font-size: 14px;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.completeButton {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.completeButton:hover:not(:disabled) {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+
+.completeButton:disabled,
+.completeButton.completed {
+  background-color: var(--success-color);
+  cursor: default;
+}
+
+.completeButton.completed:hover {
+  transform: none;
+}
+
+.publishButton {
+  background-color: #10b981;
+  color: white;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.publishButton:hover:not(:disabled) {
+  background-color: #059669;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+
+.publishButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+}
+
+.loading,
+.error {
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 18px;
+  color: var(--text-secondary);
+}
+
+.error {
+  color: #ef4444;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 24px 16px;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .completeButton {
+    width: 100%;
+  }
+
+  .outputButtonContainer {
+    justify-content: center;
+  }
+
+  .showOutputButton {
+    width: 100%;
+  }
+}
+

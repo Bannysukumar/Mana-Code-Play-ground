@@ -1,0 +1,146 @@
+.installPrompt {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1003;
+  max-width: 500px;
+  width: calc(100% - 48px);
+  animation: slideUp 0.3s ease;
+}
+
+.promptContent {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-lg);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.promptIcon {
+  font-size: 32px;
+  flex-shrink: 0;
+}
+
+.promptText {
+  flex: 1;
+  min-width: 0;
+}
+
+.promptTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 4px 0;
+}
+
+.promptDescription {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.promptActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.installButton {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.installButton:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+
+.dismissButton {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.dismissButton:hover {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .installPrompt {
+    bottom: 16px;
+    width: calc(100% - 32px);
+  }
+
+  .promptContent {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .promptIcon {
+    font-size: 28px;
+  }
+
+  .promptTitle {
+    font-size: 15px;
+  }
+
+  .promptDescription {
+    font-size: 13px;
+  }
+
+  .installButton {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  .promptActions {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .dismissButton {
+    width: 28px;
+    height: 28px;
+    font-size: 20px;
+  }
+}
+
