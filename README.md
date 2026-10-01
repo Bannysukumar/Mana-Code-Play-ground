@@ -1,67 +1,55 @@
-# NXT WAVE - Learning Platform
+<!-- readme-seo: bannysukumar-professional-v4 -->
 
-A production-ready learning platform inspired by NextWave code playground interface. Built with React, Firebase, and Monaco Editor.
+# Mana Code Playground
 
-[![License](https://img.shields.io/github/license/Bannysukumar/Mana-Code-Play-ground)](https://github.com/Bannysukumar/Mana-Code-Play-ground/blob/main/LICENSE) [![Stars](https://img.shields.io/github/stars/Bannysukumar/Mana-Code-Play-ground)](https://github.com/Bannysukumar/Mana-Code-Play-ground/stargazers) [![Last commit](https://img.shields.io/github/last-commit/Bannysukumar/Mana-Code-Play-ground)](https://github.com/Bannysukumar/Mana-Code-Play-ground/commits/main)
+Mana Code Playground is a React and Vite learning app. The document title is "Mana Code Playground - Learning Platform", and the meta description says it is an interactive HTML, CSS, and JavaScript playground. The npm package name is `nxt-wave-learning-platform`.
 
 ## Overview
 
-A production-ready learning platform inspired by NextWave code playground interface. Built with React, Firebase, and Monaco Editor.
+The app uses React 18, React Router, Firebase, and Monaco Editor. `index.html` registers a service worker when the browser supports one, and `public/manifest.json` is present. Firebase rules are in `firestore.rules`. The recorded homepage is https://mana-code-playground.vercel.app.
 
-
-What is actually in the repository: `public/`, `src/`. GitHub reports the primary language as JavaScript.
-
-Published site recorded on the repository: https://mana-code-playground.vercel.app
+The visible product name is Mana Code Playground. `nxt-wave-learning-platform` is only the package name in `package.json`.
 
 ## Features
 
-
-- 📚 Step-by-step Learning Content - Read structured lesson content
-- 💻 Code Playground - Write HTML, CSS, and JavaScript code with Monaco Editor (VS Code editor)
-- 👁️ Live Preview - See output instantly in real-time
-- ✅ Progress Tracking - Track lesson completion
-- 💾 Auto-save - Code automatically saved to Firebase
-- 🔐 Authentication - Secure email/password and Google sign-in
-- 📱 Responsive Design - Mobile-first, works on all devices
-- Dashboard
-- Lesson
-- Login
-- Output View
-- Public Project Page
+- React client with Vite
+- Monaco Editor dependency for the code editor
+- Firebase client dependency and Firestore rules
+- Web app manifest and a service-worker registration snippet in `index.html`
 
 ## Tech Stack
 
 | Technology | Where it shows up |
 |---|---|
-| React | User interface |
-| Vite | Frontend build tool |
-| Firebase | Backend services used by this repository |
+| React 18 | `package.json` |
+| Vite | `vite.config.js` and the `dev` script |
+| Firebase | `package.json`, `firebase.json`, `firestore.rules` |
+| Monaco Editor | `@monaco-editor/react` |
+| React Router | `react-router-dom` |
 
-## Project Architecture
+## Architecture
 
-React interface built with Vite → Firebase project files (firestore rules, hosting, or functions) checked into this repository.
+Browser → Vite React app → Firebase, using the Firestore rules in this repository.
 
 ## Project Structure
 
 ```text
 Mana-Code-Play-ground/
-├── public/
 ├── src/
-├── .firebaserc
-├── FIRESTORE_RULES.md
-├── PWA_SETUP.md
-├── SETUP.md
-├── firebase.json
-├── firestore.indexes.json
-├── firestore.rules
+├── public/
 ├── index.html
-├── package-lock.json
 ├── package.json
-├── vercel.json
 ├── vite.config.js
+├── firebase.json
+└── firestore.rules
 ```
 
-## Getting Started
+## Prerequisites
+
+- Node.js
+- npm
+
+## Installation
 
 ```bash
 git clone https://github.com/Bannysukumar/Mana-Code-Play-ground.git
@@ -70,16 +58,23 @@ npm install
 npm run dev
 ```
 
-Scripts defined in package.json:
+`npm run dev` runs Vite.
 
-- `npm run dev` — `vite`
-- `npm run build` — `vite build`
+## Configuration
+
+Firebase project files are `.firebaserc`, `firebase.json`, and `firestore.rules`. Do not commit private Firebase keys. `vercel.json` rewrites requests to `index.html`.
+
+## Usage
+
+Start the dev server and use the playground in the browser. The document describes the app as an interactive HTML, CSS, and JavaScript learning platform.
+
+## Demo
+
+https://mana-code-playground.vercel.app
 
 ## Deployment
 
-- vercel.json is in the repository root.
-- firebase.json is in the repository root.
-- The repository homepage is https://mana-code-playground.vercel.app.
+`vercel.json` and `firebase.json` are in the root. Homepage: https://mana-code-playground.vercel.app.
 
 ## Contributing
 
@@ -91,8 +86,6 @@ Licensed under MIT. See [LICENSE](LICENSE).
 
 ## Author
 
-[Banny Sukumar](https://github.com/Bannysukumar)
+Banny Sukumar
 
-- GitHub: [@Bannysukumar](https://github.com/Bannysukumar)
-- Portfolio: [adepu-sukumar.vercel.app](https://adepu-sukumar.vercel.app/)
-- LinkedIn: [Adepu Sukumar](https://www.linkedin.com/in/adepu-sukumar-59b423351)
+GitHub: https://github.com/Bannysukumar
