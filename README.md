@@ -280,3 +280,12 @@ MIT License - feel free to use this project for learning and development.
 
 For issues and questions, please check the code comments or refer to Firebase and React documentation.
 
+<!-- readme-seo: bannysukumar -->
+
+## Open source
+
+This repository is open source and maintained by [Banny Sukumar](https://github.com/Bannysukumar). Mana Code Play Ground is published so other developers can study the code and contribute.
+
+## License
+
+Released under the [MIT License](LICENSE). Copyright (c) 2026 Banny Sukumar. See [CONTRIBUTING.md](CONTRIBUTING.md) if you want to help.
